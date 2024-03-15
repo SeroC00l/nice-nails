@@ -1,0 +1,16 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProductCard from "@/components/ProductCard.astro";
+---
+
+<Layout title="Nice Store">
+  <header class="mt-[100px] w-full bg-pink-500 text-white p-4 text-center">
+    <h1>Nice Store</h1>
+  </header>
+
+  <section class="h-full w-full">
+    <div class="flex gap-8 cursor-pointer transition-colors w-4/5 mx-auto mt-9">
+      <ProductCard />
+    </div>
+  </section>
+</Layout>

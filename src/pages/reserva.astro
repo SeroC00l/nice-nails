@@ -1,0 +1,100 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Reserva">
+  <div class="w-full h-full bg-spa bg-center bg-cover">
+    <div class=" w-full h-full z-30 bg-white bg-opacity-30 flex items-center">
+      <form class="w-[500px] h-max">
+        <h2>Reserva tu servicio</h2>
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          placeholder="Escribe tu Nombre"
+        />
+
+        <label for="correo">Correo Electrónico:</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="Escribe tu correo (opcional)"
+        />
+
+        <label for="telefono">Celular:</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          required
+          placeholder="Escribe tu numero de WhatsApp"
+        />
+
+        <label for="fecha">Fecha de Cita:</label>
+        <input type="date" id="fecha" name="fecha" required />
+
+        <label for="servicio">Servicio de Manicura:</label>
+        <select id="servicio" name="servicio" required>
+          <option value="" disabled selected>Selecciona el servicio</option>
+          <option value="manicure-semipermanente"
+            >Manicure Semipermanente</option
+          >
+          <option value="acrilico">Acrílico</option>
+          <option value="tradicional">Tradicional</option>
+          <!-- Agrega más opciones según sea necesario -->
+        </select>
+
+        <button type="submit">Reserva</button>
+      </form>
+    </div>
+  </div>
+</Layout>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>

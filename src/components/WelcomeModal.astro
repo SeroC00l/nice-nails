@@ -1,0 +1,61 @@
+---
+let showModal = true;
+export const load = async () => {
+  // Devolverá true después de 5 segundos
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ showModal: true });
+    }, 5000);
+  });
+};
+---
+
+<div>
+  <div class="modal-overlay" style=`${showModal ? '' : 'display: none;'}`>
+    <div class="modal">
+      <h2>Bienvenido a Nice Nails</h2>
+      <p></p>
+      <a href="/tienda">
+        <img src="mk.jpg" alt="mk" class="w-80" />
+      </a>
+      <button id="cerrar">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const modalOverlay = document.querySelector(".modal-overlay");
+
+  function closeModal() {
+    modalOverlay.style.display = "none";
+  }
+
+  const button = document.querySelector("#cerrar");
+
+  button.addEventListener("click", () => {
+    closeModal();
+  });
+</script>
+
+<style>
+  /* Estilos para la superposición del modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Estilos para el contenido del modal */
+  .modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+</style>
