@@ -1,13 +1,18 @@
+---
+const { id, name, price } = Astro.props
+---
+
 <a
-  class="flex flex-col justify-center items-center bg-white rounded-lg p-5 min-w-max"
+href=`/tienda/${id}`
+class="flex flex-col justify-center items-center bg-white rounded-lg p-5 w-52"
 >
-  <img src="tienda/producto.png" alt="Producto 1" class="h-40" />
-  <h2 class="hover-title w-full text-left">Loción Facial</h2>
-  <h3 class="text-4xl w-full text-left">$ 39.900</h3>
+  <img src=`/tienda/${id}.png` alt=`imagen del producto ${name}` class="h-40" />
+  <h2 class="product-title w-full text-left">{name}</h2>
+  <h3 class="text-4xl w-full text-left">${price}</h3>
 </a>
 
 <style>
-    a:hover .hover-title {
-      color: blue;
-    }
-  </style>
+  a:hover .product-title {
+    color: blue;
+  }
+</style>

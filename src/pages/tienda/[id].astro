@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProductCard from "@/components/ProductCard.astro";
+import ProductDetails from "@/components/ProductDetails.astro";
+import { products } from "@/consts/products";
+export function getStaticPaths() {
+  const paths = products.map((product) => ({
+    params: { id: product.id },
+  }));
+  return paths;
+}
+
+const { id } = Astro.params;
+
+const product = products.find((product) => product.id === id);
+---
+
+<Layout title="Detalles del Producto">
+  <section class="mt-[200px] flex justify-center
+   gap-8 w-full">
+    <ProductDetails product={product} />
+
+    <aside class="lg:w-1/4 gap-8">
+      {
+        products.map((product, index) => (
+          <ProductCard
+            key={index}
+            id={product.id}
+            name={product.name}
+            price={product.price}
+          />
+        ))
+      }
+    </aside>
+  </section>
+</Layout>
