@@ -1,10 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { services } from "@/consts/services.ts";
 ---
 
 <Layout title="Reserva">
-  <div class="w-full h-full bg-spa bg-center bg-cover">
-    <div class=" w-full h-full z-30 bg-white bg-opacity-30 flex items-center">
+  <div class="absolute top-0 bg-spa -z-10 lg:h-screen bg-cover bg-no-repeat bg-center  h-full w-full">
+    <div class="w-full h-full z-30 bg-white bg-opacity-30 flex items-center">
       <form class="w-[500px] h-max">
         <h2>Reserva tu servicio</h2>
         <label for="nombre">Nombre:</label>
@@ -39,12 +40,11 @@ import Layout from "@/layouts/Layout.astro";
         <label for="servicio">Servicio de Manicura:</label>
         <select id="servicio" name="servicio" required>
           <option value="" disabled selected>Selecciona el servicio</option>
-          <option value="manicure-semipermanente"
-            >Manicure Semipermanente</option
-          >
-          <option value="acrilico">Acrílico</option>
-          <option value="tradicional">Tradicional</option>
-          <!-- Agrega más opciones según sea necesario -->
+          {
+            services.map((service) => (
+              <option value={service.title}>{service.title}</option>
+            ))
+          }
         </select>
 
         <button type="submit">Reserva</button>

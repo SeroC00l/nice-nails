@@ -1,44 +1,33 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import { services } from "@/consts/services.ts";
 ---
 
 <Layout title="Nuestros Servicios">
-  <h1 class="mt-32 text-4xl font-bold text-center text-green-500">
-    Servicios de Manicura
-  </h1>
+  <main>
+    <h1 class="my-10 text-4xl font-bold text-center text-pink-500">
+      Servicios de Manicure
+    </h1>
 
-  <section
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto mt-8"
-  >
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-green-500 text-xl font-semibold mb-4">
-        Manicure Semipermanente
-      </h2>
-      <p class="text-gray-700 leading-relaxed">
-        El manicure semipermanente es una opción duradera y resistente a los
-        chip. Utilizando esmalte en gel que se cura bajo luz LED, este servicio
-        proporciona un acabado brillante y de larga duración.
-      </p>
+    <div
+      class="flex justify-center flex-wrap items-center gap-x-8 gap-y-48 px-10"
+    >
+      {
+        services.map((service, index) => (
+          <ServiceCard service={service} key={index} />
+        ))
+      }
     </div>
-
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-green-500 text-xl font-semibold mb-4">Acrílico</h2>
-      <p class="text-gray-700 leading-relaxed">
-        Las uñas acrílicas son ideales para quienes desean uñas más largas y con
-        mayor resistencia. Se utilizan polvos acrílicos y líquidos especiales
-        para crear una capa fuerte y duradera sobre las uñas naturales.
-      </p>
-    </div>
-
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <h2 class="text-green-500 text-xl font-semibold mb-4">
-        Manicure Tradicional
-      </h2>
-      <p class="text-gray-700 leading-relaxed">
-        El manicure tradicional es un servicio clásico que incluye la limpieza y
-        cuidado de las uñas, la cutícula y un esmaltado regular. Perfecto para
-        quienes prefieren un estilo sencillo y elegante.
-      </p>
-    </div>
-  </section>
+    <div class="flex justify-center mt-52">
+      <a
+        href="https://wa.me/573133401152"
+        target="_blank"
+        rel="noopener norerer"
+        class="bg-pink-500 hover:bg-pink-600 text-white py-3 px-6 rounded-md transition duration-300 ease-in-out"
+      >
+        Reserva Ahora!!
+      </a>
+    </div>s
+  </main>
 </Layout>

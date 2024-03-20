@@ -1,15 +1,21 @@
 ---
-const {product} = Astro.props
+const { product } = Astro.props;
 ---
 
-<div class="flex flex-col lg:flex-row bg-white rounded-lg w-[800px] p-10">
-    <div class="lg:w-1/2 flex justify-center">
-      <img src={`${product.id}.png`} alt={product.name} class="w-64 h-64 object-contain rounded-lg" />
-    </div>
-    <div class="lg:w-1/2 lg:pl-8 mt-4 lg:mt-0">
-      <h2 class="text-2xl font-semibold mb-2">{product.name}</h2>
-      <p class="text-xl font-semibold text-blue-500">${product.price}</p>
-      <p class="text-lg text-gray-700 mb-4">{product.description}</p>
-      
-    </div>
+<div class="flex flex-col lg:flex-row bg-white rounded-lg w-[800px] p-10 shadow-md h-fit">
+  <div class="lg:w-1/2 flex justify-center">
+    <img
+      src={`${product.id}.png`}
+      alt={product.name}
+      class="w-64 h-64 object-contain rounded-lg"
+    />
   </div>
+  <div class="lg:w-1/2 lg:pl-8 mt-4 lg:mt-0">
+    <h2 class="text-2xl font-semibold mb-2">{product.name}</h2>
+    <p class="text-xl font-semibold text-blue-500">${product.price}</p>
+    <p class="text-lg text-gray-700 mb-4">{product.description}</p>
+    <a href={product.link} target="_blank" rel="noopener noreferrer" class="bg-blue-500 text-white py-2 px-4 rounded-lg mt-4">
+      Comprar por WhatsApp
+    </a>
+  </div>
+</div>

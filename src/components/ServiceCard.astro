@@ -1,0 +1,20 @@
+---
+const { service } = Astro.props;
+---
+
+<a
+  class="bg-white rounded-3xl shadow-md size-[400px] relative transition duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer"
+>
+  <div class="h-1/2">
+    <h2 class="text-white text-2xl text-center font-semibold bg-pink-500 px-10 py-4 rounded-t-3xl">
+      {service.title}
+    </h2>
+    <p class="text-gray-700 text-pretty mt-6 px-10">{service.description}</p>
+  </div>
+
+  <div
+    class="shadow-md rounded-3xl overflow-hidden w-[300px] mx-auto mt-10 aspect-square"
+  >
+    <img src={service.image} alt={service.alt} />
+  </div>
+</a>

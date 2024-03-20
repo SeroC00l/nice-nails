@@ -6,12 +6,12 @@ import { products } from "@/consts/products";
 ---
 
 <Layout title="Tienda">
-  <header class="mt-[100px] w-full bg-pink-500 text-white p-4 text-center">
+  <header class="w-full bg-pink-500 text-white p-4 text-center">
     <h1>Nice Store</h1>
   </header>
 
-  <section class="h-full w-full">
-    <div class="flex gap-8 cursor-pointer transition-colors w-4/5 mx-auto mt-9">
+  <main class="h-full w-full">
+    <div class="flex flex-wrap justify-center gap-8 cursor-pointer transition-colors w-4/5 mx-auto mt-9">
       {
         products.map((product, index) => (
           <ProductCard
@@ -23,5 +23,5 @@ import { products } from "@/consts/products";
         ))
       }
     </div>
-  </section>
+  </main>
 </Layout>

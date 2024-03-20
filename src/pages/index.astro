@@ -1,10 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-//import WelcomeModal from "../components/WelcomeModal.astro";
+import WelcomeModal from "../components/WelcomeModal.astro";
 ---
 
 <Layout title="Nice Nails">
-  <div class="bg-spa h-full bg-cover bg-no-repeat bg-center">
+  <div class="absolute top-0 -z-10 bg-spa lg:h-screen bg-cover bg-no-repeat bg-center">
     <div
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full z-30 bg-white bg-opacity-30"
     >
@@ -21,7 +21,7 @@ import Layout from "@/layouts/Layout.astro";
       <img src="/moto.png" alt="moto" class="mb-20 mt-auto mx-auto" />
     </div>
   </div>
-  <!-- <WelcomeModal /> -->
+  <WelcomeModal />
 </Layout>
 <style>
   h1 {

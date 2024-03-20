@@ -4,7 +4,7 @@ const { id, name, price } = Astro.props
 
 <a
 href=`/tienda/${id}`
-class="flex flex-col justify-center items-center bg-white rounded-lg p-5 w-52"
+class="flex flex-col justify-center items-center bg-white rounded-lg p-5 w-52 shadow-md min-w-[200px]"
 >
   <img src=`/tienda/${id}.png` alt=`imagen del producto ${name}` class="h-40" />
   <h2 class="product-title w-full text-left">{name}</h2>
