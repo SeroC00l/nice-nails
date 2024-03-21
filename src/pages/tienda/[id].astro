@@ -13,6 +13,8 @@ export function getStaticPaths() {
 const { id } = Astro.params;
 
 const product = products.find((product) => product.id === id);
+const limitedProducts = products.slice(0, 4);
+
 ---
 
 <Layout title="Detalles del Producto">
@@ -21,7 +23,7 @@ const product = products.find((product) => product.id === id);
 
     <aside class="hidden md:flex flex-wrap max-w-[500px] gap-8">
       {
-        products.map((product, index) => (
+        limitedProducts.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}
