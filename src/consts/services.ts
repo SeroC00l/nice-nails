@@ -23,4 +23,10 @@ export const services = [
     image: '/pedicure.png',
     alt: 'foto de pedicura',
   },
+  {
+    title: 'Manicure Poligel',
+    description: 'El Polygel es una técnica de construcción de uñas que combina las mejores propiedades del gel y del acrílico, dando como resultado un sistema que permite conseguir una manicura fuerte y resistente a la vez que ligera.',
+    image: '/poligel.png',
+    alt: 'foto de poligel',
+  },
 ];

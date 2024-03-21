@@ -12,13 +12,14 @@ export const load = async () => {
 
 <div>
   <div class="modal-overlay" style=`${showModal ? '' : 'display: none;'}`>
-    <div class="modal">
-      <h2>Bienvenido a Nice Nails</h2>
-      <p></p>
-      <a href="/tienda">
-        <img src="mk.jpg" alt="mk" class="w-80" />
-      </a>
-      <button id="cerrar">Cerrar</button>
+    <div class="bg-white rounded-lg text-center">
+        <h2 class="text-2xl text-white bg-pink-500 mb-4 rounded-t-lg py-3">
+          Bienvenido a Nice Nails
+        </h2>
+        <a href="/tienda">
+          <img src="mk.jpg" alt="mk" class="w-80 md:w-96" />
+        </a>
+        <button id="cerrar" class="my-2">Cerrar</button> 
     </div>
   </div>
 </div>
@@ -49,13 +50,5 @@ export const load = async () => {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  /* Estilos para el contenido del modal */
-  .modal {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
   }
 </style>
