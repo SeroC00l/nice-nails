@@ -2,7 +2,6 @@
 import Layout from "@/layouts/Layout.astro";
 import WelcomeModal from "@/components/WelcomeModal.astro";
 import WhatsappButton from "@/components/WhatsappButton.astro";
-
 ---
 
 <Layout title="Nice Nails">
@@ -21,12 +20,16 @@ import WhatsappButton from "@/components/WhatsappButton.astro";
         <h1 class="text-white">Tu Spa en Casa</h1>
       </div>
 
-      <img src="/avatar.png" alt="avatar" class="hidden lg:block mt-auto mx-auto" />
+      <img
+        src="/avatar.png"
+        alt="avatar"
+        class="hidden lg:block mt-auto mx-auto"
+      />
       <img src="/moto.png" alt="moto" class="mb-20 mt-auto mx-auto" />
     </div>
   </section>
   <WelcomeModal />
- <WhatsappButton />
+  <WhatsappButton />
 </Layout>
 <style>
   h1 {
