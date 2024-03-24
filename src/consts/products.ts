@@ -49,16 +49,81 @@ export const products = [
     id: "s-l1600",
     name: "Mary Kay MK Men Daily Facial Wash",
     price: 0,
-    description:
-      "",
+    description: "",
     link: "",
   },
   {
     id: "locion-facial-regeneradora",
     name: "Loción Facial Regeneradora C + E TimeWise®",
     price: 117900,
-    description: "La Loción Facial Regeneradora C + E TimeWise® incluye la combinación extraordinaria de las vitaminas C + E. La vitamina E, es un antioxidante reconocido, que al mezclarse con la vitamina C, ayudan a defender la piel de los radicales libres que provocan el envejecimiento prematuro.",
+    description:
+      "La Loción Facial Regeneradora C + E TimeWise® incluye la combinación extraordinaria de las vitaminas C + E. La vitamina E, es un antioxidante reconocido, que al mezclarse con la vitamina C, ayudan a defender la piel de los radicales libres que provocan el envejecimiento prematuro.",
     link: "",
   },
-  
+  {
+    id: "parches-hidrogel",
+    name: "PARCHES PARA OJOS DE HIDROGEL",
+    price: 0,
+    description:
+      "La Loción Facial Regeneradora C + E TimeWise® incluye la combinación extraordinaria de las vitaminas C + E. La vitamina E, es un antioxidante reconocido, que al mezclarse con la vitamina C, ayudan a defender la piel de los radicales libres que provocan el envejecimiento prematuro.",
+    link: "",
+  },
+  {
+    id: "Iluminador-con-Acido-Ferulico-y-Niacinamida",
+    name: "Iluminador de Ácido Ferúlico + Niacinamida Mary Kay Clinical Solutions®, 15 ml",
+    price: 0,
+    description: "",
+    link: "",
+  },
+  {
+    id: "Tonico-facial-refrescante",
+    name: "Tónico facial refrescante Botanical Effects® Mary Kay®",
+    price: 0,
+    description: "",
+    link: "",
+  },
+  {
+    id: "locion-desmaquillante",
+    name: "¡NUEVA! Loción Desmaquillante de Ojos Libre de Aceite Mary Kay®",
+    price: 67900,
+    description:
+      "Con solo agitar y deslizar, la Loción Desmaquillante de Ojos Libre de Aceite Mary Kay® limpia y retira incluso el maquillaje más intenso de ojos, sin estirar o maltratar tu piel.",
+    link: "",
+  },
+  {
+    id: "Maquillaje-Liquido-Acabado-Mate-TimeWise-bronze-8",
+    name: "¡NUEVO TONO! Maquillaje Líquido Acabado Mate TimeWise™ Bronze 8",
+    price: 45900,
+    description:
+      "Además de reducir la apariencia de los poros, las finas líneas de expresión, arrugas e imperfecciones de la piel, es la base perfecta contra el envejecimiento. Controla el brillo y la grasa todo el día sin que se sienta o se vea cargado el maquillaje.",
+    link: "",
+  },
+  {
+    id: "timewise-age-minimize-3d",
+    name: "MARY KAY TIMEWISE AGE MINIMIZE 3D ~ CREMA PARA OJOS",
+    price: 0,
+    description: "",
+    link: "",
+  },
+  {
+    id: "reductor-instantaneo-de-inchazon",
+    name: "REDUCTOR INSTANTÁNEO DE HINCHAZÓN MARY KAY",
+    price: 0,
+    description: "",
+    link: "",
+  },
+  {
+    id: "Agua-Micelar",
+    name: "Agua Micellar Mary Kay®",
+    price: 0,
+    description: "Limpiar tu piel nunca fue tan fácil. No renuncies a un rostro fresco con este versátil modo de limpiar tan piel. El agua micelar tiene una fórmula suave pero muy efectiva, que elimina impurezas sin necesidad de frotar. Las finas micelas actuán como imanes que atraen las impurezas estés donde estés sin necesidad de enjuagar después.",
+    link: "",
+  },
+  {
+    id: "sombra-de-ojos-liquida-brillante",
+    name: "Sombra de ojos líquida brillante grafito Mary Kay",
+    price: 0,
+    description: "",
+    link: "",
+  },
 ];

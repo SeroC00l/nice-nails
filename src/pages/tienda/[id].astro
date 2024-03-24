@@ -3,6 +3,23 @@ import Layout from "@/layouts/Layout.astro";
 import ProductCard from "@/components/ProductCard.astro";
 import ProductDetails from "@/components/ProductDetails.astro";
 import { products } from "@/consts/products";
+import Footer from "@/components/Footer.astro";
+
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]
+    ];
+  }
+
+  return array;
+}
+
 export function getStaticPaths() {
   const paths = products.map((product) => ({
     params: { id: product.id },
@@ -13,10 +30,11 @@ export function getStaticPaths() {
 const { id } = Astro.params;
 
 const product = products.find((product) => product.id === id);
-const limitedProducts = products.slice(0, 4);
 
+// Mezclar aleatoriamente la lista de productos y tomar los primeros 4 elementos después de la mezcla
+const shuffledProducts = shuffle(products.slice(4)); // Excluye los 4 primeros elementos
+const limitedProducts = shuffledProducts.slice(0, 4);
 ---
-
 <Layout title="Detalles del Producto">
   <main class="flex justify-center gap-8 w-full mt-10">
     <ProductDetails product={product} />
@@ -34,4 +52,5 @@ const limitedProducts = products.slice(0, 4);
       }
     </aside>
   </main>
+  <Footer />
 </Layout>

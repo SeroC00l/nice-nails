@@ -2,11 +2,11 @@
 import Layout from "@/layouts/Layout.astro";
 import ProductCard from "@/components/ProductCard.astro";
 import WhatsappButton from "@/components/WhatsappButton.astro";
-
 import { products } from "@/consts/products";
+import Footer from "@/components/Footer.astro";
 ---
 
-<Layout title="Tienda">
+<Layout title="Tienda Mary Kay">
   <header class="w-full bg-pink-500 text-white p-4 text-center">
     <h1>Nice Store</h1>
   </header>
@@ -25,5 +25,6 @@ import { products } from "@/consts/products";
       }
     </div>
     <WhatsappButton />
+    <Footer></Footer>
   </main>
 </Layout>
