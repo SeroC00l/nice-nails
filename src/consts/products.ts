@@ -2,24 +2,24 @@ export const products = [
   {
     id: "mascarilla-facial-de-limpieza-profunda-clear-proof",
     name: "Mascarilla facial de limpieza profunda con carbón Clear Proof® Mary Kay®",
-    price: 0,
-    description: "",
-    link: "",
+    price: 50000,
+    description: "Ayuda a eliminar el exceso de grasa y apariencia de poros.",
+    link: "https://wa.me/p/25739668575620219/573133401152",
   },
   {
     id: "locion-humectante-efecto-reparador",
     name: "Loción Humectante TimeWise® Efecto Renovador Mary Kay®",
-    price: 0,
-    description: "",
-    link: "",
+    price: 60000,
+    description: "Humectante facial de uso diario.",
+    link: "https://wa.me/p/7706647369400033/573133401152",
   },
   {
     id: "beige-n180-mate",
-    name: "Base TimeWise 3D® Beige W 180 – Mate",
-    price: 63000,
+    name: "Base TimeWise 3D® Beige W 180 - Mate",
+    price: 59000,
     description:
       "Formulada con el Complejo Age Minimize 3D®, la Base TimeWise 3D® Mate va más allá de ofrecer una cobertura impecable, ¡ofrece belleza sin edad! Además, fue creada con la Tecnología Intellimatch® que capturó los tonos reales de miles de mujeres alrededor del mundo. Los resultados fueron la guía para crear cada uno de los tonos para que cada mujer pueda encontrar el tono de base que combine perfectamente con su tono de piel.",
-    link: "",
+    link: "https://wa.me/p/6826068490831756/573133401152",
   },
   {
     id: "berry",
@@ -32,10 +32,10 @@ export const products = [
   {
     id: "Espuma-Limpiadora-Facial-TimeWise-Repair",
     name: "Espuma Limpiadora Facial TimeWise® Repair® Volu Firm® Mary Kay®",
-    price: 0,
+    price: 60000,
     description:
       "Esta espuma rica en humectación limpia profundamente y renueva la textura de la piel, y le da a los poros una apariencia menos notable      Mantiene el balance de humectación.",
-    link: "",
+    link: "https://wa.me/p/7350314748390952/573133401152",
   },
   {
     id: "maqliq_luminoso_330",
@@ -58,29 +58,29 @@ export const products = [
     price: 117900,
     description:
       "La Loción Facial Regeneradora C + E TimeWise® incluye la combinación extraordinaria de las vitaminas C + E. La vitamina E, es un antioxidante reconocido, que al mezclarse con la vitamina C, ayudan a defender la piel de los radicales libres que provocan el envejecimiento prematuro.",
-    link: "",
+    link: "https://wa.me/p/7280440545402060/573133401152",
   },
   {
     id: "parches-hidrogel",
     name: "PARCHES PARA OJOS DE HIDROGEL",
-    price: 0,
+    price: 120000,
     description:
       "La Loción Facial Regeneradora C + E TimeWise® incluye la combinación extraordinaria de las vitaminas C + E. La vitamina E, es un antioxidante reconocido, que al mezclarse con la vitamina C, ayudan a defender la piel de los radicales libres que provocan el envejecimiento prematuro.",
-    link: "",
+    link: "https://wa.me/p/7403074233112299/573133401152",
   },
   {
     id: "Iluminador-con-Acido-Ferulico-y-Niacinamida",
     name: "Iluminador de Ácido Ferúlico + Niacinamida Mary Kay Clinical Solutions®, 15 ml",
-    price: 0,
-    description: "",
-    link: "",
+    price: 80000,
+    description: "Hay uno para cada necesidad, haz tu consulta te daremos la mejor asesoría.",
+    link: "https://wa.me/p/7925626974133278/573133401152",
   },
   {
     id: "Tonico-facial-refrescante",
     name: "Tónico facial refrescante Botanical Effects® Mary Kay®",
-    price: 0,
-    description: "",
-    link: "",
+    price: 64000,
+    description: "Para todo tipo de piel.",
+    link: "https://wa.me/p/7464731580216886/573133401152",
   },
   {
     id: "locion-desmaquillante",
@@ -101,9 +101,9 @@ export const products = [
   {
     id: "timewise-age-minimize-3d",
     name: "MARY KAY TIMEWISE AGE MINIMIZE 3D ~ CREMA PARA OJOS",
-    price: 0,
+    price: 60000,
     description: "",
-    link: "",
+    link: "https://wa.me/p/7795519873791483/573133401152",
   },
   {
     id: "reductor-instantaneo-de-inchazon",
@@ -115,9 +115,9 @@ export const products = [
   {
     id: "Agua-Micelar",
     name: "Agua Micellar Mary Kay®",
-    price: 0,
+    price: 40000,
     description: "Limpiar tu piel nunca fue tan fácil. No renuncies a un rostro fresco con este versátil modo de limpiar tan piel. El agua micelar tiene una fórmula suave pero muy efectiva, que elimina impurezas sin necesidad de frotar. Las finas micelas actuán como imanes que atraen las impurezas estés donde estés sin necesidad de enjuagar después.",
-    link: "",
+    link: "https://wa.me/p/7697717956940033/573133401152",
   },
   {
     id: "sombra-de-ojos-liquida-brillante",

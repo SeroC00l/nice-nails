@@ -24,6 +24,12 @@ export const services = [
     alt: 'foto de poligel',
   },
   {
+    title: 'Recubrimiento',
+    description: 'Es una técnica que consiste en la aplicación de una capa de acrílico sobre las uñas naturales; se emplea para las personas con uñas débiles y quebradizas, para poder mejorar tanto el aspecto como la firmeza.',
+    video: '/recubrimiento.mp4',
+    alt: 'video de recubrimiento',
+  },
+  {
     title: 'Pedicure',
     description: 'El pedicure es un tratamiento estético que se realiza en los pies para cuidar la piel, las uñas y relajar los músculos. Disfruta de pies perfectamente cuidados y elegantes con Nice Nails.',
     image: '/pedicure.png',
