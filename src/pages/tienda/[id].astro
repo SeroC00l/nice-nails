@@ -35,7 +35,10 @@ const product = products.find((product) => product.id === id);
 const shuffledProducts = shuffle(products.slice(4)); // Excluye los 4 primeros elementos
 const limitedProducts = shuffledProducts.slice(0, 4);
 ---
-<Layout title="Detalles del Producto">
+<Layout title="Detalles del Producto" className="pt-[64px]">
+  <header class="w-full  text-primary font-semibold text-3xl p-4 text-center">
+    <h1>Nice Store</h1>
+  </header>
   <main class="flex justify-center gap-8 w-full mt-10">
     <ProductDetails product={product} />
 
