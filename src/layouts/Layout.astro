@@ -13,15 +13,18 @@ const { title, className } = Astro.props;
 <html lang="es" class="m-0 p-0">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="NICE NAILS ofrece servicios de manicura profesional en Colombia. Nuestro equipo de estilistas de uñas te brinda tratamientos personalizados para el cuidado y diseño de tus uñas. ¡Visítanos y descubre las últimas tendencias en uñas!"
+    />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" href="logo.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class=`bg-pink-50 p-0 m-0 ${className}`>
     <Header />
-      <slot />
+    <slot />
   </body>
 </html>
 <style is:global>
@@ -37,13 +40,13 @@ const { title, className } = Astro.props;
       monospace;
   }
   ::-webkit-scrollbar {
-    width: 11px; 
-    background-color:; 
+    width: 11px;
+    background-color:;
     padding: 4px 0px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #f54e85 ;
+    background-color: #f54e85;
     border-radius: 5px;
   }
 
