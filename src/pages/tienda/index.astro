@@ -2,8 +2,10 @@
 import Layout from "@/layouts/Layout.astro";
 import ProductCard from "@/components/ProductCard.astro";
 import WhatsappButton from "@/components/WhatsappButton.astro";
-import { products } from "@/consts/products";
+import { db, products } from "astro:db";
 import Footer from "@/components/Footer.astro";
+
+const $products = await db.select().from(products);
 ---
 
 <Layout title="Tienda Mary Kay" className="pt-[64px]">
@@ -14,7 +16,7 @@ import Footer from "@/components/Footer.astro";
   <main class="h-full w-full">
     <div class="flex flex-wrap justify-center gap-8 cursor-pointer transition-colors w-4/5 mx-auto mt-9">
       {
-        products.map((product, index) => (
+        $products.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}

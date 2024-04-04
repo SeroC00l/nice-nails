@@ -2,8 +2,11 @@
 import Layout from "@/layouts/Layout.astro";
 import ProductCard from "@/components/ProductCard.astro";
 import ProductDetails from "@/components/ProductDetails.astro";
-import { products } from "@/consts/products";
+import { db, products } from "astro:db";
 import Footer from "@/components/Footer.astro";
+
+
+const $products = await db.select().from(products);
 
 function shuffle(array) {
   let currentIndex = array.length, randomIndex;
@@ -20,8 +23,9 @@ function shuffle(array) {
   return array;
 }
 
-export function getStaticPaths() {
-  const paths = products.map((product) => ({
+export async function getStaticPaths() {
+  const $products = await db.select().from(products);
+  const paths = $products.map((product) => ({
     params: { id: product.id },
   }));
   return paths;
@@ -29,12 +33,10 @@ export function getStaticPaths() {
 
 const { id } = Astro.params;
 
-const product = products.find((product) => product.id === id);
-
-// Mezclar aleatoriamente la lista de productos y tomar los primeros 4 elementos después de la mezcla
-const shuffledProducts = shuffle(products.slice(4)); // Excluye los 4 primeros elementos
-const limitedProducts = shuffledProducts.slice(0, 4);
+const product = $products.find((product) => product.id === id);
 ---
+
+
 <Layout title="Detalles del Producto" className="pt-[64px]">
   <header class="w-full  text-primary font-semibold text-3xl p-4 text-center">
     <h1>Nice Store</h1>
@@ -44,7 +46,7 @@ const limitedProducts = shuffledProducts.slice(0, 4);
 
     <aside class="hidden md:flex flex-wrap max-w-[500px] gap-8">
       {
-        limitedProducts.map((product, index) => (
+       $products.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}
