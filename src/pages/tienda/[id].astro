@@ -35,7 +35,7 @@ const product = $products.find((product) => product.id === id);
     <aside
       class="hidden md:block h-[700px] overflow-y-scroll"
     >
-      <div class="h-full md:flex flex-col gap-8 px-2">
+      <div class="h-full md:grid grid-cols-2 gap-8 px-2">
         {
           $products.map((product, index) => (
             <ProductCard
