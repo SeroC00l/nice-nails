@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import db from "@astrojs/db";
 
 import cloudflare from "@astrojs/cloudflare";
+import cloudflare from "@astrojs/ima";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,7 +12,7 @@ export default defineConfig({
   adapter: cloudflare(),
   vite: {
     ssr: {
-      noExternal: ["astro"],
+      noExternal: ["astro","@astrojs/image"],
     },
   },
 });
