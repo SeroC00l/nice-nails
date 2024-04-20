@@ -7,13 +7,7 @@ import { db, products } from "astro:db";
 
 const $products = await db.select().from(products);
 
-export async function getStaticPaths() {
-  const $products = await db.select().from(products);
-  const paths = $products.map((product) => ({
-    params: { id: product.id },
-  }));
-  return paths;
-}
+export const prerender = true;
 
 const { id } = Astro.params;
 const product = $products.find((product) => product.id === id);
@@ -32,10 +26,10 @@ const product = $products.find((product) => product.id === id);
       )
     }
 
-    <aside
-      class="hidden md:block h-[700px] overflow-y-scroll"
-    >
-    <h3 class="text-2xl font-bold text-gray-500 my-2" >Productos Recomendados</h3>
+    <aside class="hidden md:block h-[700px] overflow-y-scroll">
+      <h3 class="text-2xl font-bold text-gray-500 my-2">
+        Productos Recomendados
+      </h3>
       <div class="h-full md:grid grid-cols-2 gap-8 px-2">
         {
           $products.map((product, index) => (
