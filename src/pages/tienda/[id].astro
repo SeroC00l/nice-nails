@@ -17,7 +17,6 @@ export async function getStaticPaths() {
 
 const { id } = Astro.params;
 const product = $products.find((product) => product.id === id);
-export const prerender = true;
 ---
 
 <Layout title="Detalles del Producto" className="pt-[64px]">
