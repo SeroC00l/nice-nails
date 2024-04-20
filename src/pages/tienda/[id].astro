@@ -7,6 +7,13 @@ import { db, products } from "astro:db";
 
 const $products = await db.select().from(products);
 
+export async function getStaticPaths() {
+  const $products = await db.select().from(products);
+  const paths = $products.map((product) => ({
+    params: { id: product.id },
+  }));
+  return paths;
+}
 export const prerender = true;
 
 const { id } = Astro.params;
