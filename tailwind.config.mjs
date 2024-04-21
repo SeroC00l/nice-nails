@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        spa: "url('/public/spa.jpg')",
+        spa: "url('/spa.jpg')",
       },
       colors: {
         "primary": "#f54e85",

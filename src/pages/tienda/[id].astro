@@ -19,7 +19,7 @@ export const prerender = true;
 const { id } = Astro.params;
 const product = $products.find((product) => product.id === id);
 ---
-
+ 
 <Layout title="Detalles del Producto" className="pt-[64px]">
   <header class="w-full text-primary font-semibold text-3xl p-4 text-center">
     <h2><a href="/tienda">Nice Store</a></h2>
