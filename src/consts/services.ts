@@ -37,7 +37,7 @@ export const services = [
   },
   {
     title: 'Keratina',
-    description: 'El tratamiento de keratina es un proceso intensivo que ayuda a suavizar y restaurar el cabello dañado, dejándolo más brillante, manejable y con aspecto saludable.',
+    description: 'El tratamiento de keratina es un proceso intensivo que ayuda a suavizar y restaurar el cabello dañado, dejándolo 100% liso, más brillante, manejable y con aspecto saludable.',
     image: '/keratina.png',
     alt: 'foto de keratina',
   },
