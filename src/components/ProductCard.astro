@@ -1,18 +1,21 @@
 ---
-const { id, name, price } = Astro.props
+const { id, name, price } = Astro.props;
+
+const formattedPrice = new Intl.NumberFormat("es-CO", {
+  style: "currency",
+  currency: "COP",
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+}).format(price);
 ---
 
 <a
-href=`/tienda/${id}`
-class="flex flex-col justify-center items-center bg-white rounded-lg p-5 w-52 shadow-md min-w-[200px]"
+  href=`/tienda/${id}`
+  class="flex flex-col justify-center gap-2 items-center bg-white border rounded-lg p-5 w-52 min-w-[300px]"
 >
-  <img src=`/tienda/${id}.png` alt=`imagen del producto ${name}` class="h-40" />
+  <img src=`/tienda/${id}.png` alt=`imagen del producto ${name}` class="h-40 border-b" />
   <h2 class="product-title w-full text-left">{name}</h2>
-  <h3 class="text-4xl w-full text-primary font-semibold text-left">${price}</h3>
+  <h3 class="text-4xl w-full text-primary font-semibold text-left">
+    {formattedPrice}
+  </h3>
 </a>
-
-<style>
-  a:hover .product-title {
-    color: blue;
-  }
-</style>
