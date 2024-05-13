@@ -13,7 +13,10 @@ const formattedPrice = new Intl.NumberFormat("es-CO", {
   href=`/tienda/${id}`
   class="flex flex-col justify-center gap-2 items-center bg-white border rounded-lg p-5 w-52 min-w-[300px]"
 >
-  <img src=`/tienda/${id}.png` alt=`imagen del producto ${name}` class="h-40 border-b" />
+  <div class="h-40 border-b w-full">
+    <img src=`/tienda/${id}.png` alt=`imagen del producto ${name}` class=" mx-auto h-full" />
+  </div>
+
   <h2 class="product-title w-full text-left">{name}</h2>
   <h3 class="text-4xl w-full text-primary font-semibold text-left">
     {formattedPrice}
