@@ -1,12 +1,7 @@
 ---
-const { id, name, price } = Astro.props;
+import { formatPrice } from "@/lib/utils";
 
-const formattedPrice = new Intl.NumberFormat("es-CO", {
-  style: "currency",
-  currency: "COP",
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0,
-}).format(price);
+const { id, name, price } = Astro.props;
 ---
 
 <a
@@ -19,6 +14,6 @@ const formattedPrice = new Intl.NumberFormat("es-CO", {
 
   <h2 class="product-title w-full text-left">{name}</h2>
   <h3 class="text-4xl w-full text-primary font-semibold text-left">
-    {formattedPrice}
+    {formatPrice(price)}
   </h3>
 </a>

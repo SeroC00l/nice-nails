@@ -1,0 +1,125 @@
+---
+import { db, manicuristas, servicios } from "astro:db";
+
+const allManicuristas = await db.select().from(manicuristas);
+const services = await db.select().from(servicios);
+---
+
+<button id="openModalBtn" class="block mx-auto mt-10">Reservar Servicio</button>
+<form class="w-[500px] h-max hidden border-2" id="reservaForm">
+  <label for="name">Nombre:</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    required
+    placeholder="Escribe tu Nombre"
+  />
+
+  <label for="address">Dirección:</label>
+  <input
+    type="text"
+    id="address"
+    name="address"
+    placeholder="Ingresa tu direccioón"
+    required
+  />
+
+  <label for="telefono">Telefono:</label>
+  <input
+    type="tel"
+    id="telephone"
+    name="telephone"
+    required
+    placeholder="Escribe tu numero de WhatsApp"
+  />
+  <label for="service">Servicio:</label>
+  <select id="service" name="serviceId" required>
+    <option value="" disabled selected>Selecciona el servicio</option>
+    {
+      services.map((service) => (
+        <option value={service.id}>{service.nombre}</option>
+      ))
+    }
+  </select>
+  <label for="manicusirta">Manicurista:</label>
+  <select id="manicurista" name="manicuristaId" required>
+    <option value="" disabled selected>Selecciona una manicurista</option>
+    {
+      allManicuristas.map((manicurista) => (
+        <option value={manicurista.id}>{manicurista.nombre}</option>
+      ))
+    }
+  </select>
+  <label for="date">Fecha de Cita:</label>
+  <input type="datetime-local" id="date" name="date" required />
+  <button id="reservarBtn">Reserva</button>
+</form>
+
+<script>
+  const openModalBtn = document.getElementById("openModalBtn");
+  const reservarBtn = document.getElementById("reservarBtn");
+  const reservaForm = document.getElementById("reservaForm") as HTMLFormElement;
+
+  openModalBtn?.addEventListener("click", () => {
+    reservaForm.classList.toggle("hidden");
+  });
+
+  reservarBtn?.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(reservaForm);
+    try {
+      const response = await fetch("/api/reserva", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
+      });
+
+      if (!response.ok) {
+        console.log(response);
+        throw new Error("Error al enviar la solicitud");
+      }
+      const clientId = await response.json();
+      console.log(clientId);
+      localStorage.setItem("clientId", clientId);
+    } catch (error) {
+      console.error(error);
+    }
+  });
+</script>
+
+<style>
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #f54e85;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>

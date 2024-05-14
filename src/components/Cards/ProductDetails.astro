@@ -1,6 +1,6 @@
 ---
-import AddToCart from "./AddToCart.svelte";
-
+import { formatPrice } from "@/lib/utils";
+import AddToCart from "../AddToCart.svelte";
 const { product } = Astro.props;
 ---
 
@@ -16,8 +16,8 @@ const { product } = Astro.props;
   </div>
   <div class="lg:w-1/2 lg:pl-8 mt-4 lg:mt-0">
     <h2 class="text-2xl font-semibold mb-2">{product.name}</h2>
-    <p class="text-xl font-semibold text-primary">${product.price}</p>
+    <p class="text-xl font-semibold text-primary">{formatPrice(product.price)}</p>
     <p class="text-lg text-gray-700 mb-4">{product.description}</p>
-    <AddToCart client:idle product={product}/>
+    <AddToCart client:idle product={product} />
   </div>
 </div>

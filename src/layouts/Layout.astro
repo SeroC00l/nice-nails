@@ -1,5 +1,6 @@
 ---
 import Header from "@/components/Header.astro";
+import WhatsappButton from "@/components/WhatsappButton.astro";
 
 interface Props {
   title: string;
@@ -22,9 +23,10 @@ const { title, className } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class=`bg-pink-50 p-0 m-0 ${className}`>
+  <body class=` p-0 m-0 ${className}`>
     <Header />
     <slot />
+    <WhatsappButton />
   </body>
 </html>
 <style is:global>
@@ -38,6 +40,9 @@ const { title, className } = Astro.props;
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+  body{
+    font-family: sans-serif;
   }
   ::-webkit-scrollbar {
     width: 11px;

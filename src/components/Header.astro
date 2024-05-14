@@ -1,36 +1,111 @@
-<header class="top-0 flex justify-between h-max w-full z-50 bg-white px-4 shadow-md fixed md:px-20">
-  <a href="/" class="flex items-center w-max py-2  gap-4">
+<header
+  class="top-0 flex justify-center h-max w-full z-50 bg-white px-4 shadow-md fixed md:px-20"
+>
+  <a href="/" class="flex items-center w-max py-2">
     <picture class="flex h-full text-white items-center justify-center">
-      <img src="/logo.png" alt="logo" class="h-12" />
+      <img src="/logo.png" alt="logo" class="h-16" />
     </picture>
     <h1 class="text-4xl text-primary font-bold">NICE NAILS</h1>
   </a>
-  <nav class="flex flex-col md:flex-row items-end justify-center md:items-stretch md:justify-end w-max p-4 font-sans">
-    <button id="menu-toggle" class="block md:hidden text-primary focus:outline-none">
+  <nav
+    class="flex flex-col md:flex-row items-end justify-center md:items-stretch md:justify-end w-max py-4 px-10 font-sans"
+  >
+    <button
+      id="menu-toggle"
+      class="block md:hidden text-primary focus:outline-none"
+    >
       <!-- Ícono del menú para pantallas pequeñas -->
-      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      <svg
+        class="h-6 w-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
     <ul id="menu-items" class="hidden md:flex gap-8 h-full list-none">
       <li class="flex items-center">
-        <a href="/" class="text-gray-500 no-underline hover:text-primary transition-colors duration-200 text-lg font-bold">INICIO</a>
+        <a
+          href="/"
+          class="text-gray-500 no-underline hover:text-primary transition-colors duration-200 text-lg font-bold"
+          >INICIO</a
+        >
       </li>
-      <!-- <li class="flex items-center">
-        <a href="/reserva" class="text-pink-500 no-underline text-lg font-bold">RESERVA</a>
-      </li> -->
       <li class="flex items-center">
-        <a href="/tienda" class="text-gray-500 hover:text-primary no-underline text-lg font-bold">TIENDA</a>
+        <a href="/reserva" class="text-gray-500 hover:text-pink-500 no-underline text-lg font-bold">RESERVA</a>
+      </li>
+      <li class="flex items-center">
+        <a
+          href="/tienda"
+          class="text-gray-500 hover:text-primary no-underline text-lg font-bold"
+          >TIENDA</a
+        >
+      </li>
+      <li class="flex items-center">
+        <div class="flex justify-center space-x-4">
+          <a
+            href="https://www.facebook.com/Erika.Cadena.Nice.Nails"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white rounded-lg bg-blue-500 hover:bg-blue-600 p-1"
+          >
+            <span class="sr-only">Facebook</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook"
+              ><path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              ></path></svg
+            >
+          </a>
+          <a
+            href="https://www.instagram.com/nicenails_erica_cadena/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white rounded-lg bg-gradient-to-br from-yellow-500 to-pink-500 hover:bg-gradient-to-br hover:from-yellow-600 hover:to-pink-600 p-1"
+          >
+            <span class="sr-only">Instagram</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram"
+              ><rect width="20" height="20" x="2" y="2" rx="5" ry="5"
+              ></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+              ></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg
+            >
+          </a>
+        </div>
       </li>
     </ul>
   </nav>
 </header>
 
 <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuItems = document.getElementById('menu-items');
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuItems = document.getElementById("menu-items");
 
-  menuToggle.addEventListener('click', () => {
-    menuItems.classList.toggle('hidden');
+  menuToggle.addEventListener("click", () => {
+    menuItems.classList.toggle("hidden");
   });
 </script>

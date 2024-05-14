@@ -2,31 +2,32 @@
 import Layout from "@/layouts/Layout.astro";
 import WelcomeModal from "@/components/WelcomeModal.astro";
 import WhatsappButton from "@/components/WhatsappButton.astro";
-import ServiceCard from "@/components/ServiceCard.astro";
+import ServiceCard from "@/components/Cards/ServiceCard.astro";
 import Footer from "@/components/Footer.astro";
 import { services } from "@/consts/services";
 ---
 
 <Layout title="Nice Nails" className="pt-[64px]">
-  <section class="top-0 -z-10 bg-spa w-full bg-cover bg-no-repeat bg-center">
-    <div
-      class="flex items-end justify-between bg-white bg-opacity-60 w-full h-full z-30"
-    >
-      <picture class="md:h-[300px]">
-        <img
-          src="/domicilio.png"
-          alt="manicure a domicilio"
-          class="size-full mt-auto mx-auto"
-        />
-      </picture>
+  <main>
+    <section class="top-0 -z-10 bg-spa w-full bg-cover bg-no-repeat bg-center">
+      <div
+        class="flex items-end justify-between bg-white bg-opacity-60 w-full h-full z-30"
+      >
+        <picture class="md:h-[300px]">
+          <img
+            src="/domicilio.png"
+            alt="manicure a domicilio"
+            class="size-full mt-auto mx-auto"
+          />
+        </picture>
 
-      <picture>
-        <img src="/avatar.png" alt="Manicurista profesional Colombia" />
-      </picture>
-    </div>
-  </section>
+        <picture>
+          <img src="/avatar.png" alt="Manicurista profesional Colombia" />
+        </picture>
+      </div>
+    </section>
 
-    <h2 class="my-16 md:my-32 text-4xl font-bold text-center text-gray-500">
+    <h2 class="my-16 md:my-32 text-4xl font-bold text-center text-primary">
       Nuestros Servicios
     </h2>
 
@@ -51,6 +52,5 @@ import { services } from "@/consts/services";
     </div>
   </main>
   <WelcomeModal />
-  <WhatsappButton />
   <Footer />
 </Layout>
