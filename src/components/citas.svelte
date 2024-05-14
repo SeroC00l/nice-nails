@@ -6,7 +6,7 @@
 
   onMount(async () => {
     const clientId = localStorage.getItem("clientId");
-    const response = await fetch(`/api/reserva/3`);
+    const response = await fetch(`/api/reserva/${clientId}`);
     const data = await response.json();
     reservas = readable(
       data.map((reserva) => ({
