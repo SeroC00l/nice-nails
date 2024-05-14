@@ -1,9 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import ProductCard from "@/components/ProductCard.astro";
-import WhatsappButton from "@/components/WhatsappButton.astro";
+import ProductCard from "@/components/Cards/ProductCard.astro";
 import { db, products } from "astro:db";
 import Footer from "@/components/Footer.astro";
+
 
 const $products = await db.select().from(products);
 ---
@@ -15,7 +15,7 @@ const $products = await db.select().from(products);
 
   <main class="h-full w-full">
     <div
-      class="flex flex-wrap justify-center gap-8 cursor-pointer transition-colors w-4/5 mx-auto mt-9"
+      class="flex flex-wrap justify-center gap-8 cursor-pointer transition-colors w-4/5 mx-auto"
     >
       {
         $products.map((product, index) => (
@@ -28,7 +28,6 @@ const $products = await db.select().from(products);
         ))
       }
     </div>
-    <WhatsappButton />
     <Footer />
   </main>
 </Layout>
